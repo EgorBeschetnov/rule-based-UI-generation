@@ -1,0 +1,68 @@
+{
+  "timestamp": "20260506_130119",
+  "model": "llama3.2:3b",
+  "user_input": "Меню RPG игры \"Eclipse of Gods\" в мрачном стиле. Пункты: Новая игра, Продолжить, Настройки, Персонажи, Выход. В настройках: ползунок Звук, ползунок Музыка, чекбокс Полный экран, выбор Язык. В персонажах: Воин, Маг, Лучник.",
+  "raw_response": "{\"title\": \"Меню RPG игры Eclipse of Gods\", \"items\": [\"Новая игра\", \"Продолж\n\"Продолжить\", \"Настройки\", \"Персонажи\", \"Выход\"], \"style\": {\"bg_color\": \"#3\n\"#333333\", \"text_color\": \"#FFFFFF\", \"button_bg\": \"#444444\", \"button_hover\":\n\"button_hover\": \"#555555\", \"font_family\": \"Arial\", \"layout\": \"horizontal\", \n\"border_radius\": 10, \"box_shadow\": \"0 0 10px rgba(0, 0, 0, 0.2)\"}}",
+  "parsed_json": {
+    "title": "Eclipse of Gods",
+    "items": [
+      "Новая игра",
+      "Продолжить",
+      "Настройки",
+      "Персонажи",
+      "Выход"
+    ],
+    "style": {
+      "bg_color": "#1e1e2f",
+      "text_color": "#ffffff",
+      "button_bg": "#3a3a5a",
+      "button_hover": "#5a5a8a",
+      "font_family": "Arial, sans-serif",
+      "layout": "vertical",
+      "border_radius": "8px",
+      "text_transform": "uppercase"
+    },
+    "screens": {
+      "settings": {
+        "title": "Настройки",
+        "items": [],
+        "extra_components": [
+          {
+            "type": "slider",
+            "label": "Звук",
+            "min": 0,
+            "max": 100,
+            "value": 50
+          },
+          {
+            "type": "slider",
+            "label": "Музыка",
+            "min": 0,
+            "max": 100,
+            "value": 50
+          },
+          {
+            "type": "checkbox",
+            "label": "Полный экран",
+            "checked": false
+          },
+          {
+            "type": "select",
+            "label": "Язык",
+            "options": []
+          }
+        ]
+      },
+      "characters": {
+        "title": "Персонажи",
+        "items": [
+          "Воин",
+          "Маг",
+          "Лучник"
+        ],
+        "extra_components": []
+      }
+    }
+  },
+  "success": false
+}

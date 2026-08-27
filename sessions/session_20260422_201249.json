@@ -1,0 +1,35 @@
+{
+  "timestamp": "20260422_201249",
+  "model": "llama3.2:3b",
+  "user_input": "Меню RPG игры \"Eclipse of Gods\" в мрачном стиле. Пункты: Новая игра, Продолжить, Настройки, Персонажи, Выход. В настройках: ползунок Звук, ползунок Музыка, чекбокс Полный экран, выбор Язык. В персонажах: Воин, Маг, Лучник.",
+  "raw_response": "```json\n{\n    \"interface\": {\n        \"name\": \"Eclipse of Gods Menu\",\n        \"navPoints\": [\n            \"Новая игра\",\n            \"Продолжить\",\n            \"Настройки\",\n            \"Персонажи\",\n            \"Выход\"\n        ],\n        \"style\": {\n            \"colors\": [\"#2B3F54\", \"#4F5259\"],\n            \"font\": \"Open Sans\",\n            \"layout\": \"grid\",\n            \"roundedCorners\": true,\n            \"shadows\": true,\n            \"animations\": [\n                \"transition-duration: 0.5s\"\n            ]\n        },\n        \"subscreens\": {\n            \"настройки\": {\n                \"points\": [\"Звук\", \"Музыка\", \"Полный экран\", \"Язык\"],\n                \"controls\": [\n                    {\"id\": \"volume-toggle\", \"type\": \"slider\"},\n                    {\"id\": \"music-toggle\", \"type\": \"checkbox\"},\n                    {\"id\": \"full-screen-toggle\", \"type\": \"switch\"},\n                    {\"id\": \"language-picker\", \"type\": \"select\"}\n                ]\n            },\n            \"персонажи\": {\n                \"points\": [\n                    \"Воин\",\n                    \"Маг\",\n                    \"Лучник\"\n                ],\n                \"controls\": [\n                    {\"id\": \"character-switcher\", \"type\": \"tab\"}\n                ]\n            }\n        }\n    }\n}\n```",
+  "parsed_json": {
+    "title": "Eclipse of Gods Menu",
+    "items": [
+      "Пункт 1",
+      "Пункт 2",
+      "Пункт 3"
+    ],
+    "style": {
+      "font_family": "Open Sans",
+      "layout": "grid"
+    },
+    "screens": {
+      "screen": {
+        "title": "Персонажи",
+        "items": [
+          "Воин",
+          "Маг",
+          "Лучник"
+        ],
+        "extra_components": [
+          {
+            "type": "text",
+            "content": "Character switcher"
+          }
+        ]
+      }
+    }
+  },
+  "success": true
+}

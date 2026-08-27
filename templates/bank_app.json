@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "name": "Банковское приложение",
+    "description": "Строгий корпоративный стиль, тёмно-синий, сетка"
+  },
+  "title": "NordBank",
+  "items": ["Счета", "Переводы", "Кредиты", "Инвестиции", "Поддержка", "Настройки"],
+  "style": {
+    "bg_color": "#0a1628",
+    "text_color": "#e8edf5",
+    "button_bg": "#1a3a6b",
+    "button_hover": "#2a5298",
+    "font_family": "'Arial', sans-serif",
+    "layout": "grid",
+    "border_radius": "6px",
+    "text_transform": "none",
+    "box_shadow": "0 2px 8px rgba(0,0,0,0.4)",
+    "animation": "scale(1.03)"
+  },
+  "screens": {
+    "transfers": {
+      "title": "Переводы",
+      "items": ["По номеру карты", "По номеру телефона", "Между счетами", "История"],
+      "extra_components": []
+    },
+    "settings": {
+      "title": "Настройки",
+      "items": [],
+      "extra_components": [
+        {"type": "checkbox", "label": "Push-уведомления", "checked": true},
+        {"type": "checkbox", "label": "Вход по биометрии", "checked": false},
+        {"type": "checkbox", "label": "Скрыть баланс", "checked": false},
+        {"type": "select", "label": "Язык", "options": ["Русский", "English"]},
+        {"type": "select", "label": "Валюта", "options": ["RUB", "USD", "EUR"]},
+        {"type": "input", "label": "Кодовое слово", "placeholder": "Секретное слово"}
+      ]
+    }
+  }
+}

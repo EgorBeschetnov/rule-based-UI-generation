@@ -1,0 +1,30 @@
+{
+  "timestamp": "20260417_210713",
+  "model": "llama3.2:3b",
+  "user_input": "меню для мрачной RPG игры в стилистике Dark Souls, название \"Eclipse of Gods\", пункты: Новая игра, Продолжить, Настройки, Галерея, Выход",
+  "raw_response": "{\n  \"title\": \"Eclipse of Gods\",\n  \"items\": [\"Новая игра\", \"Продолжить\", \"Настройки\", \"Галерея\", \"Выход\"],\n  \"style\": {\n    \"bg_color\": \"#2B2F33\",\n    \"text_color\": \"#FFFFFF\",\n    \"button_bg\": \"#3A3D41\",\n    \"button_hover\": \"#4C5259\",\n    \"font_family\": \"Impact\",\n    \"layout\": \"grid\",\n    \"border_radius\": \"8px\",\n    \"text_transform\": \"uppercase\",\n    \"box_shadow\": \"-1px -1px 10px rgba(255,255,255,0.5)\",\n    \"animation\": \"scale(1.05)\"\n  },\n  \"extra_components\": []\n}",
+  "parsed_json": {
+    "title": "Eclipse of Gods",
+    "items": [
+      "Новая игра",
+      "Продолжить",
+      "Настройки",
+      "Галерея",
+      "Выход"
+    ],
+    "style": {
+      "bg_color": "#2B2F33",
+      "text_color": "#FFFFFF",
+      "button_bg": "#3A3D41",
+      "button_hover": "#4C5259",
+      "font_family": "Impact",
+      "layout": "grid",
+      "border_radius": "8px",
+      "text_transform": "uppercase",
+      "box_shadow": "-1px -1px 10px rgba(255,255,255,0.5)",
+      "animation": "scale(1.05)"
+    },
+    "extra_components": []
+  },
+  "success": true
+}

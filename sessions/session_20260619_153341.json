@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-06-19 15:33:41",
+  "model": "llava:7b",
+  "title": "Меню",
+  "success": true,
+  "html_file": "output\\menu_Меню.html",
+  "user_input": "Интерфейс файлового менеджера в светло-синем корпоративном стиле с меню по центру.\nПункты меню: Дашборд, Общие, Избранное, Корзина, Помощь, Настройки.\nНа главной: счётчики файлов по типам (изображения, документы, музыка),\nпапки с размером и количеством файлов, таблица последних файлов,\nкруговой индикатор использования хранилища.\nВ настройках: ползунок квоты, чекбокс автосинхронизации,\nвыбор сортировки, поле поиска. Белый фон, синий сайдбар,\nкарточки с тенями, закруглённые углы, сетка.",
+  "parsed_json": {
+    "title": "Меню",
+    "items": [
+      "Пункт 1",
+      "Пункт 2",
+      "Пункт 3"
+    ],
+    "style": {
+      "layout": "sidebar"
+    },
+    "screens": {
+      "punkt_1": {
+        "title": "Пункт 1",
+        "items": [],
+        "extra_components": []
+      },
+      "punkt_2": {
+        "title": "Пункт 2",
+        "items": [],
+        "extra_components": []
+      },
+      "punkt_3": {
+        "title": "Пункт 3",
+        "items": [],
+        "extra_components": []
+      }
+    }
+  },
+  "raw_response": "```json\n{\n  \"general\": {\n    \"colors\": {\n      \"background\": \"#0C1D\",\n      \"primaryText\": \"#E74C\",\n      \"secondaryText\": \"#5869\"\n    },\n    \"buttons\": {\n      \"default\": {\n        \"color\": \"#fff\",\n        \"textColor\": \"#1a2b3c\",\n        \"background\": \"#f1f1f1\",\n        \"borderRadius\": 4,\n        \"fontSize\": \"16px\"\n      },\n      \"hover\": {\n        \"color\": \"#ff90\",\n        \"textColor\": \"#fff\",\n        \"background\": \"#1a2b3c\",\n        \"borderRadius\": 4,\n        \"fontSize\": \"18px\"\n      },\n      \"active\": {\n        \"color\": \"#1a2b3c\",\n        \"textColor\": \"#fff\",\n        \"background\": \"#f1f1f1\",\n        \"borderRadius\": 4,\n        \"fontSize\": \"20px\"\n      }\n    },\n    \"icons\": {\n      \"fileManager\": \"#0D66\",\n      \"dashboard\": \"#B305\",\n      \"dashboardItems\": \"#E74C\"\n    }\n  },\n  \"dashboard\": {\n    \"widgets\": [\n      {\n        \"type\": \"fileCountWidget\",\n        \"background\": \"#fff\",\n        \"iconColor\": \"#ff90\",\n        \"textColor\": \"#1a2b3c\",\n        \"borderRadius\": 4,\n        \"padding\": 10,\n        \"fontSize\": \"18px\"\n      },\n      {\n        \"type\": \"fileUploadWidget\",\n        \"background\": \"#f1f1f1\",\n        \"iconColor\": \"#ff90\",\n        \"textColor\": \"#1a2b3c\",\n        \"borderRadius\": 4,\n        \"padding\": 15,\n        \"fontSize\": \"16px\"\n      },\n      {\n        \"type\": \"fileListWidget\",\n        \"background\": \"#fff\",\n        \"iconColor\": \"#ff90\",\n        \"textColor\": \"#1a2b3c\",\n        \"borderRadius\": 4,\n        \"padding\": 15,\n        \"fontSize\": \"16px\"\n      }\n    ],\n    \"dashboardItems\": [\n      {\n        \"type\": \"fileCountItem\",\n        \"iconColor\": \"#ff90\",\n        \"textColor\": \"#1a2b3c\",\n        \"background\": \"#f1f1f1\",\n        \"borderRadius\": 4,\n        \"padding\": 8,\n        \"fontSize\": \"16px\"\n      },\n      {\n        \"type\": \"fileUploadItem\",\n        \"iconColor\": \"#ff90\",\n        \"textColor\": \"#1a2b3c\",\n        \"background\": \"#f1f1f1\",\n        \"borderRadius\": 4,\n        \"padding\": 8,\n        \"fontSize\": \"16px\"\n      },\n      {\n        \"type\": \"fileListItem\",\n        \"iconColor\": \"#ff90\",\n        \"textColor\": \"#1a2b3c\",\n        \"background\": \"#f1f1f1\",\n        \"borderRadius\": 4,\n        \"padding\": 8,\n        \"fontSize\": \"16px\"\n      }\n    ]\n  },\n  \"fileManager\": {\n    \"widgets\": [\n      {\n        \"type\": \"fileUploadWidget\",\n        \"background\": \"#fff\",\n        \"iconColor\": \"#ff90\",\n        \"textColor\": \"#1a2b3c\",\n        \"borderRadius\": 4,\n        \"padding\": 15,\n        \"fontSize\": \"16px\"\n      },\n      {\n        \"type\": \"fileListWidget\",\n        \"background\": \"#fff\",\n        \"iconColor\": \"#ff90\",\n        \"textColor\": \"#1a2b3c\",\n        \"borderRadius\": 4,\n        \"padding\": 15,\n        \"fontSize\": \"16px\"\n      }\n    ],\n    \"fileManagerItems\": [\n      {\n        \"type\": \"fileUploadItem\",\n        \"iconColor\": \"#ff90\",\n        \"textColor\": \"#1a2b3c\",\n        \"background\": \"#f1f1f1\",\n        \"borderRadius\": 4,\n        \"padding\": 8,\n        \"fontSize\": \"16px\"\n      },\n      {\n        \"type\": \"fileListItem\",\n        \"iconColor\": \"#ff90\",\n        \"textColor\": \"#1a2b3c\",\n        \"background\": \"#f1f1f1\",\n        \"borderRadius\": 4,\n        \"padding\": 8,\n        \"fontSize\": \"16px\"\n      }\n    ]\n  },\n  \"nastavenie\": {\n    \"widgets\": [\n      {\n        \"type\": \"fileUploadWidget\",\n        \"background\": \"#fff\",\n        \"iconColor\": \"#ff90\",\n        \"textColor\": \"#1a2b3c\",\n        \"borderRadius\": 4,\n        \"padding\": 15,\n        \"fontSize\": \"16px\"\n      },\n      {\n        \"type\": \"fileListWidget\",\n        \"background\": \"#fff\",\n        \"iconColor\": \"#ff90\",\n        \"textColor\": \"#1a2b3c\",\n        \"borderRadius\": 4,\n        \"padding\": 15,\n        \"fontSize\": \"16px\"\n      }\n    ],\n    \"nastavenieItems\": [\n      {\n        \"type\": \"fileUploadItem\",\n        \"iconColor\": \"#ff90\",\n        \"textColor\": \"#1a2b3c\",\n        \"background\": \"#f1f1f1\",\n        \"borderRadius\": 4,\n        \"padding\": 8,\n        \"fontSize\": \"16px\"\n      },\n      {\n        \"type\": \"fileListItem\",\n        \"iconColor\": \"#ff90\",\n        \"textColor\": \"#1a2b3c\",\n        \"background\": \"#f1f1f1\",\n        \"borderRadius\": 4,\n        \"padding\": 8,\n        \"fontSize\": \"16px\"\n      }\n    ]\n  }\n}\n```\n\nEste JSON-specífico define estructura para oashboard de un file manager, así como para las páginas de configuración y el panel central.\n\n* El oboard de la aplicación está compuesto por secciones principales: Dashboards (menciona \"Dashboards\"), Objeciones, Izquierda (que es el módulo de navegación) y Ayuda, con cada una de estas secciones divididas en subsecciones.\n* Los widgets que componen el dashboard principal incluyen contadores para ficheros por tipo de archivo (imágenes, documentos, música), un calendario, una tabla de los últimos ficheros cargados y un gráfico de seguimiento diario.\n* Los widgets de la sección \"Objeciones\" muestran el análisis semanal y una lista de archivos de una forma similar.\n* La página de configuración central está compuesta por opciones de configuración para la interfaz (con un ícono de usuario y una sección de búsqueda), una pantalla que muestra el análisis del uso diario de los ficheros, y dos opciones de acción.\n\nTen en cuenta que este es solo un ejemplo de cómo podríamos visualizar estos widgets en JSON, y la respuesta real dependerá de las especificaciones adicionales requeridas"
+}

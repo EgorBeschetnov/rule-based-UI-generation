@@ -1,0 +1,28 @@
+{
+  "timestamp": "20260417_211940",
+  "model": "llama3.2:3b",
+  "user_input": "Меню RPG игры \"Eclipse of Gods\" в мрачном стиле. Пункты: Новая игра, Продолжить, Настройки, Персонажи, Выход. В настройках: Звук, Видео, Управление. В персонажах: Воин, Маг, Лучник.",
+  "raw_response": "{\n  \"title\": \"Меню RPG\",\n  \"items\": [\n    \"Новая игра\",\n    \"Продолжить\",\n    \"Настройки\",\n    \"Персонажи\",\n    \"Выход\"\n  ],\n  \"style\": {\n    \"bg_color\": \"#2f4f4f\", // мрачный цвет\n    \"text_color\": \"#ffffff\", // белый текст\n    \"button_bg\": \"#3b3f51\", // темный цвет с тени\n    \"button_hover\": \"#34495e\", // светлее темного цвета на hover\n    \"font_family\": \"Impact\",\n    \"layout\": \"horizontal\",\n    \"border_radius\": \"8px\",\n    \"text_transform\": \"none\",\n    \"box_shadow\": \"0 0 10px rgba(255,255,255,0.5)\",\n    \"animation\": \"scale(1.05)\"\n  },\n  \"extra_components\": []\n}",
+  "parsed_json": {
+    "title": "Меню",
+    "items": [
+      "Новая игра",
+      "Продолжить",
+      "Настройки",
+      "Персонажи",
+      "Выход"
+    ],
+    "style": {
+      "bg_color": "#1e1e2f",
+      "text_color": "#ffffff",
+      "button_bg": "#3a3a5a",
+      "button_hover": "#5a5a8a",
+      "font_family": "Arial, sans-serif",
+      "layout": "vertical",
+      "border_radius": "8px",
+      "text_transform": "uppercase"
+    },
+    "extra_components": []
+  },
+  "success": false
+}

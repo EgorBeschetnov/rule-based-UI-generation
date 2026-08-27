@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "name": "Кафе / ресторан",
+    "description": "Тёплый минималистичный стиль для приложения кофейни"
+  },
+  "title": "Brew & Go",
+  "items": ["Меню", "Мои заказы", "Бонусы", "Настройки"],
+  "style": {
+    "bg_color": "#f5ebe0",
+    "text_color": "#3d2b1f",
+    "button_bg": "#c7956c",
+    "button_hover": "#a0522d",
+    "font_family": "'Georgia', serif",
+    "layout": "vertical",
+    "border_radius": "12px",
+    "text_transform": "none",
+    "box_shadow": "0 4px 12px rgba(0,0,0,0.1)",
+    "animation": "translateY(-3px)"
+  },
+  "screens": {
+    "menu": {
+      "title": "Меню",
+      "items": ["Кофе", "Десерты", "Напитки", "Завтраки"],
+      "extra_components": []
+    },
+    "settings": {
+      "title": "Настройки",
+      "items": [],
+      "extra_components": [
+        {"type": "checkbox", "label": "Уведомления об акциях", "checked": true},
+        {"type": "checkbox", "label": "Тёмная тема", "checked": false},
+        {"type": "select", "label": "Язык", "options": ["Русский", "English"]},
+        {"type": "select", "label": "Город", "options": ["Москва", "СПб", "Казань"]},
+        {"type": "input", "label": "Промокод", "placeholder": "Введите промокод"}
+      ]
+    }
+  }
+}

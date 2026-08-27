@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "name": "Sci-Fi интерфейс",
+    "description": "Футуристический неоновый стиль, киберпанк"
+  },
+  "title": "SYSTEM v2.0",
+  "items": ["Инициализация", "Сканирование", "Базы данных", "Связь", "Выход"],
+  "style": {
+    "bg_color": "#000a0f",
+    "text_color": "#00ffff",
+    "button_bg": "#001a1f",
+    "button_hover": "#003040",
+    "font_family": "'Courier New', monospace",
+    "layout": "vertical",
+    "border_radius": "0px",
+    "text_transform": "uppercase",
+    "box_shadow": "0 0 12px rgba(0,255,255,0.4), inset 0 0 8px rgba(0,255,255,0.1)",
+    "animation": "scale(1.02)"
+  },
+  "screens": {
+    "database": {
+      "title": "Базы данных",
+      "items": ["Сектор А", "Сектор Б", "Архив", "Засекречено"],
+      "extra_components": []
+    },
+    "settings": {
+      "title": "Параметры",
+      "items": [],
+      "extra_components": [
+        {"type": "slider", "label": "Яркость", "min": 0, "max": 100, "value": 60},
+        {"type": "slider", "label": "Частота сканирования", "min": 1, "max": 100, "value": 30},
+        {"type": "checkbox", "label": "Шифрование", "checked": true},
+        {"type": "checkbox", "label": "Голосовой ввод", "checked": false},
+        {"type": "select", "label": "Протокол", "options": ["TCP", "UDP", "QUIC"]}
+      ]
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "name": "RPG-игра",
+    "description": "Тёмное меню в стиле фэнтези с подэкранами настроек и персонажей"
+  },
+  "title": "Главное меню",
+  "items": ["Новая игра", "Продолжить", "Настройки", "Персонажи", "Выход"],
+  "style": {
+    "bg_color": "#1a0a2e",
+    "text_color": "#e8d5a3",
+    "button_bg": "#3d1a6e",
+    "button_hover": "#7b2d8b",
+    "font_family": "'Cinzel', 'Georgia', serif",
+    "layout": "vertical",
+    "border_radius": "4px",
+    "text_transform": "uppercase",
+    "box_shadow": "0 0 15px rgba(123,45,139,0.5)",
+    "animation": "scale(1.04)"
+  },
+  "screens": {
+    "settings": {
+      "title": "Настройки",
+      "items": [],
+      "extra_components": [
+        {"type": "slider", "label": "Звук", "min": 0, "max": 100, "value": 70},
+        {"type": "slider", "label": "Музыка", "min": 0, "max": 100, "value": 50},
+        {"type": "checkbox", "label": "Полный экран", "checked": false},
+        {"type": "select", "label": "Язык", "options": ["Русский", "English"]}
+      ]
+    },
+    "characters": {
+      "title": "Персонажи",
+      "items": ["Воин", "Маг", "Лучник"],
+      "extra_components": []
+    }
+  }
+}

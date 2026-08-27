@@ -1,0 +1,81 @@
+{
+  "timestamp": "20260420_175701",
+  "model": "llama3.2:3b",
+  "user_input": "Главное меню фитнес-приложения \"PulseFit\" в ярком спортивном стиле. Ярко-оранжевый фон, белые кнопки, шрифт Impact, горизонтальное расположение пунктов. Пункты: Тренировки, Питание, Прогресс, Сообщество, Настройки. В тренировках: Силовые, Кардио, Растяжка, HIIT, Йога. В питании: Дневник питания, Рецепты, Калькулятор калорий, Питьевой режим. В настройках: ползунок Громкость тренера, ползунок Интенсивность вибрации, чекбокс Уведомления, чекбокс Тёмная тема, чекбокс Звук таймера, выбор Единицы измерения, выбор Язык, поле ввода Цель по калориям.",
+  "raw_response": "{\n  \"title\": \"Тренировки\",\n  \"items\": [\"Силовые\", \"Кардио\", \"Растяжка\", \"HIIT\", \"Йога\"],\n  \"style\": {\n    \"bg_color\": \"#FFA07A\",\n    \"text_color\": \"#FFFFFF\",\n    \"button_bg\": \"#FFFFFF\",\n    \"button_hover\": \"#000000\",\n    \"font_family\": \"Impact\",\n    \"layout\": \"horizontal\",\n    \"border_radius\": \"8px\",\n    \"text_transform\": \"none\",\n    \"box_shadow\": \"none\",\n    \"animation\": \"scale(1.05)\"\n  },\n  \"screens\": {\n    \"settings\": {\n      \"title\": \"Настройки\",\n      \"items\": [\"Громкость тренера\", \"Интенсивность вибрации\"],\n      \"extra_components\": [\n        {\"type\": \"slider\", \"label\": \"Громкость тренера\", \"min\": 0, \"max\": 1\u001b[1D\u001b[K\n100, \"value\": 50},\n        {\"type\": \"checkbox\", \"label\": \"Уведомления\", \"checked\": false},\n        {\"type\": \"select\", \"label\": \"Язык\", \"options\": [\"Русский\", \"English\u001b[8D\u001b[K\n\"English\"]}\n      ]\n    }\n  }\n}",
+  "parsed_json": {
+    "title": "PulseFit",
+    "items": [
+      "Тренировки",
+      "Питание",
+      "Прогресс",
+      "Сообщество",
+      "Настройки"
+    ],
+    "style": {
+      "bg_color": "#1e1e2f",
+      "text_color": "#ffffff",
+      "button_bg": "#3a3a5a",
+      "button_hover": "#5a5a8a",
+      "font_family": "Arial, sans-serif",
+      "layout": "vertical",
+      "border_radius": "8px",
+      "text_transform": "uppercase"
+    },
+    "screens": {
+      "settings": {
+        "title": "Настройки",
+        "items": [],
+        "extra_components": [
+          {
+            "type": "slider",
+            "label": "Громкость тренера",
+            "min": 0,
+            "max": 100,
+            "value": 50
+          },
+          {
+            "type": "slider",
+            "label": "Интенсивность вибрации",
+            "min": 0,
+            "max": 100,
+            "value": 50
+          },
+          {
+            "type": "checkbox",
+            "label": "Уведомления",
+            "checked": false
+          },
+          {
+            "type": "checkbox",
+            "label": "Тёмная тема",
+            "checked": false
+          },
+          {
+            "type": "slider",
+            "label": "чекбокс  таймера",
+            "min": 0,
+            "max": 100,
+            "value": 50
+          },
+          {
+            "type": "select",
+            "label": "Единицы измерения",
+            "options": []
+          },
+          {
+            "type": "select",
+            "label": "Язык",
+            "options": []
+          },
+          {
+            "type": "input",
+            "label": "поле а Цель по калориям",
+            "placeholder": ""
+          }
+        ]
+      }
+    }
+  },
+  "success": false
+}

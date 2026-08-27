@@ -1,0 +1,43 @@
+{
+  "timestamp": "20260505_161802",
+  "model": "llama3.2:3b",
+  "user_input": "Меню RPG игры \"Eclipse of Gods\" в мрачном стиле. Пункты: Новая игра, Продолжить, Настройки, Персонажи, Выход. В настройках: ползунок Звук, ползунок Музыка, чекбокс Полный экран, выбор Язык. В персонажах: Воин, Маг, Лучник.",
+  "raw_response": "```json\n{\n  \"menu\": {\n    \"name\": \"Eclipse of Gods\",\n    \"items\": [\n      \"Новая игра\",\n      \"Продолжить\",\n      \"Настройки\",\n      \"Персонажи\",\n      \"Выход\"\n    ],\n    \"style\": {\n      \"colors\": [\"#232323\", \"#333333\", \"#444444\"],\n      \"font\": \"Arial, sans-serif\",\n      \"layout\": \"flex\",\n      \"rounded\": true,\n      \"shadow\": false,\n      \"animations\": []\n    },\n    \"subscreens\": [\n      {\n        \"id\": \"settings\",\n        \"items\": [\"Звук\", \"Музыка\", \"Полный экран\", \"Язык\"],\n        \"style\": {\n          \"colors\": [\"#333333\", \"#444444\"],\n          \"font\": \"Arial, sans-serif\",\n          \"layout\": \"grid\",\n          \"rounded\": false,\n          \"shadow\": true,\n          \"animations\": []\n        },\n        \"interactions\": [\n          {\"type\": \"sliders\", \"id\": \"volume\"},\n          {\"type\": \"switches\", \"id\": \"music\"}\n        ]\n      },\n      {\n        \"id\": \"characters\",\n        \"items\": [\"Воин\", \"Маг\", \"Лучник\"],\n        \"style\": {\n          \"colors\": [\"#444444\"],\n          \"font\": \"Arial, sans-serif\",\n          \"layout\": \"flex\",\n          \"rounded\": false,\n          \"shadow\": true,\n          \"animations\": []\n        },\n        \"interactions\": [\n          {\"type\": \"buttons\", \"id\": \"character-select\"}\n        ]\n      }\n    ]\n  }\n}\n```",
+  "parsed_json": {
+    "title": "Eclipse of Gods",
+    "items": [
+      "Новая игра",
+      "Продолжить",
+      "Настройки",
+      "Персонажи",
+      "Выход"
+    ],
+    "style": {
+      "font_family": "Arial, sans-serif",
+      "layout": "flex",
+      "box_shadow": "False"
+    },
+    "screens": {
+      "settings": {
+        "title": "Настройки",
+        "items": [
+          "Звук",
+          "Музыка",
+          "Полный экран",
+          "Язык"
+        ],
+        "extra_components": []
+      },
+      "characters": {
+        "title": "Персонажи",
+        "items": [
+          "Воин",
+          "Маг",
+          "Лучник"
+        ],
+        "extra_components": []
+      }
+    }
+  },
+  "success": true
+}

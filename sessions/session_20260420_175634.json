@@ -1,0 +1,82 @@
+{
+  "timestamp": "20260420_175634",
+  "model": "llama3.2:3b",
+  "user_input": "Главное меню стратегии \"Iron Crown\" в стиле средневековья. Тёмно-коричневый фон с текстурой камня, золотой текст, шрифт Georgia. Расположение кнопок: grid. Пункты: Новая кампания, Загрузить игру, Мультиплеер, Энциклопедия, Настройки, Выход. В настройках: ползунок Звук битвы, ползунок Музыка, ползунок Громкость окружения, чекбокс Полный экран, чекбокс Субтитры, чекбокс Кровь и жестокость, выбор Язык, выбор Сложность. В мультиплеере: Создать лобби, Найти игру, Рейтинг, Друзья. В энциклопедии: Фракции, Юниты, Здания, Технологии, История мира.",
+  "raw_response": "{\n  \"title\": \"Новая кампания\",\n  \"items\": [\n    \"Загрузить игру\",\n    \"Мультиплеер\",\n    \"Энциклопедия\",\n    \"Настройки\",\n    \"Выход\"\n  ],\n  \"style\": {\n    \"bg_color\": \"#2F4F4F\",\n    \"text_color\": \"#FFD700\",\n    \"button_bg\": \"#964B00\",\n    \"button_hover\": \"#786C3B\",\n    \"font_family\": \"Georgia\",\n    \"layout\": \"grid\",\n    \"border_radius\": \"8px\",\n    \"text_transform\": \"none\",\n    \"box_shadow\": \"none\",\n    \"animation\": \"none\"\n  },\n  \"screens\": {\n    \"settings\": {\n      \"title\": \"Настройки\",\n      \"items\": [\n        {\"type\": \"slider\", \"label\": \"Звук битвы\", \"min\": 0, \"max\": 100, \"va\u001b[3D\u001b[K\n\"value\": 70},\n        {\"type\": \"slider\", \"label\": \"Музыка\", \"min\": 0, \"max\": 100, \"value\"\u001b[7D\u001b[K\n\"value\": 50},\n        {\"type\": \"checkbox\", \"label\": \"Полный экран\", \"checked\": false},\n        {\"type\": \"checkbox\", \"label\": \"Субтитры\", \"checked\": false},\n        {\"type\": \"checkbox\", \"label\": \"Кровь и жестокость\", \"checked\": fals\u001b[4D\u001b[K\nfalse},\n        {\"type\": \"select\", \"label\": \"Язык\", \"options\": [\"Русский\", \"English\u001b[8D\u001b[K\n\"English\"]}\n      ]\n    },\n    \"characters\": {\n      \"title\": \"Персонажи\",\n      \"items\": [\n        \"Воин\",\n        \"Маг\",\n        \"Лучник\"\n      ],\n      \"extra_components\": []\n    }\n  }\n}",
+  "parsed_json": {
+    "title": "Iron Crown",
+    "items": [
+      "Новая кампания",
+      "Загрузить игру",
+      "Мультиплеер",
+      "Энциклопедия",
+      "Настройки",
+      "Выход"
+    ],
+    "style": {
+      "bg_color": "#1e1e2f",
+      "text_color": "#ffffff",
+      "button_bg": "#3a3a5a",
+      "button_hover": "#5a5a8a",
+      "font_family": "Arial, sans-serif",
+      "layout": "vertical",
+      "border_radius": "8px",
+      "text_transform": "uppercase"
+    },
+    "screens": {
+      "settings": {
+        "title": "Настройки",
+        "items": [],
+        "extra_components": [
+          {
+            "type": "slider",
+            "label": "Звук битвы",
+            "min": 0,
+            "max": 100,
+            "value": 50
+          },
+          {
+            "type": "slider",
+            "label": "Музыка",
+            "min": 0,
+            "max": 100,
+            "value": 50
+          },
+          {
+            "type": "slider",
+            "label": "Громкость окружения",
+            "min": 0,
+            "max": 100,
+            "value": 50
+          },
+          {
+            "type": "checkbox",
+            "label": "Полный экран",
+            "checked": false
+          },
+          {
+            "type": "checkbox",
+            "label": "Субтитры",
+            "checked": false
+          },
+          {
+            "type": "checkbox",
+            "label": "Кровь и жестокость",
+            "checked": false
+          },
+          {
+            "type": "select",
+            "label": "Язык",
+            "options": []
+          },
+          {
+            "type": "select",
+            "label": "Сложность",
+            "options": []
+          }
+        ]
+      }
+    }
+  },
+  "success": false
+}

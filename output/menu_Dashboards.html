@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboards</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: #1a1a2e;
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            color: #eeeeee;
+            display: flex;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        /* ── Sidebar ── */
+        .sidebar {
+            width: 240px;
+            min-height: 100vh;
+            background: #161627;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            box-shadow: 2px 0 12px rgba(0,0,0,0.3);
+            flex-shrink: 0;
+            z-index: 10;
+        }
+
+        .sidebar-header {
+            padding: 28px 24px 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .sidebar-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.95;
+        }
+
+        .sidebar-subtitle {
+            font-size: 0.75rem;
+            opacity: 0.45;
+            margin-top: 4px;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+
+        .sidebar-nav {
+            flex: 1;
+            padding: 16px 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 11px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            border: none;
+            background: transparent;
+            color: #eeeeee;
+            font-family: inherit;
+            text-align: left;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            opacity: 0.7;
+        }
+
+        .nav-item:hover {
+            background: #0f3460;
+            opacity: 1;
+        }
+
+        .nav-item.active {
+            background: #e94560;
+            opacity: 1;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .nav-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: currentColor;
+            opacity: 0.5;
+            flex-shrink: 0;
+        }
+
+        .nav-item.active .nav-dot { opacity: 1; }
+
+        /* ── Content area ── */
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content-header {
+            padding: 24px 32px 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            background: rgba(0,0,0,0.1);
+        }
+
+        .content-header h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: none;
+            margin-bottom: 0;
+        }
+
+        .content-body {
+            padding: 28px 32px;
+            flex: 1;
+        }
+
+        /* ── Screens ── */
+        .screen { display: none; }
+        .screen.active { display: flex; width: 100%; min-height: 100vh; }
+
+        /* ── Cards (кнопки-карточки в content area) ── */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 16px;
+            margin-top: 8px;
+        }
+
+        .card-btn {
+            background: #0f3460;
+            border: 1px solid rgba(255,255,255,0.08);
+            color: #eeeeee;
+            padding: 20px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-family: inherit;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all 0.25s ease;
+            text-align: center;
+            letter-spacing: 0.5px;
+            box-shadow: none;
+        }
+
+        .card-btn:hover {
+            background: #e94560;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+        }
+
+        
+        .components-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 560px;
+            margin-top: 8px;
+        }
+
+        .component-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 12px 16px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .component-label {
+            font-size: 0.97rem;
+            min-width: 130px;
+            opacity: 0.9;
+        }
+
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 180px;
+            height: 5px;
+            background: #0f3460;
+            border-radius: 3px;
+            outline: none;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 17px; height: 17px;
+            background: #e94560;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .slider-value {
+            min-width: 32px;
+            text-align: right;
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+
+        input[type="checkbox"] {
+            width: 20px; height: 20px;
+            accent-color: #e94560;
+            cursor: pointer;
+        }
+
+        select {
+            background: #0f3460;
+            color: #eeeeee;
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 7px 12px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            cursor: pointer;
+            outline: none;
+        }
+
+        input[type="text"] {
+            background: #0f3460;
+            color: #eeeeee;
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 9px 14px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            width: 195px;
+            outline: none;
+        }
+        input[type="text"]::placeholder { opacity: 0.4; }
+
+        .static-text {
+            opacity: 0.5;
+            font-size: 0.9rem;
+            padding: 6px 0;
+        }
+        
+
+        /* ── Секции ── */
+        .section-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.4;
+            margin-bottom: 16px;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 700px) {
+            .sidebar { width: 60px; }
+            .sidebar-title, .sidebar-subtitle, .nav-item span { display: none; }
+            .content-header h1 { font-size: 1.3rem; }
+            .content-body { padding: 16px; }
+        }
+        </style>
+</head>
+<body>
+    <div id="screen-screen" class="screen active">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-title">Dashboards</div>
+            <div class="sidebar-subtitle">Navigation</div>
+        </div>
+        <nav class="sidebar-nav">
+            <button class="nav-item">
+                <span class="nav-dot"></span>
+                <span>Пункт 1</span>
+            </button>
+            <button class="nav-item">
+                <span class="nav-dot"></span>
+                <span>Пункт 2</span>
+            </button>
+            <button class="nav-item">
+                <span class="nav-dot"></span>
+                <span>Пункт 3</span>
+            </button>
+        </nav>
+    </div>
+        <div class="content">
+            <div class="content-header"><h1>Korzina Dashboard</h1></div>
+            <div class="content-body">
+            </div>
+        </div>
+    </div>
+
+<script>
+        function showScreen(screenId) {
+            document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+            const target = document.getElementById('screen-' + screenId);
+            if (target) target.classList.add('active');
+            // Подсвечиваем активный пункт nav
+            document.querySelectorAll('.nav-item').forEach(btn => {
+                const fn = btn.getAttribute('onclick') || '';
+                btn.classList.toggle('active', fn.includes("'" + screenId + "'"));
+            });
+        }
+
+        function goBack() { /* no-op in sidebar */ }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const first = document.querySelector('.nav-item');
+                if (first) first.click();
+            }
+        });
+        </script>
+</body>
+</html>

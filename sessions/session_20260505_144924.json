@@ -1,0 +1,68 @@
+{
+  "timestamp": "20260505_144924",
+  "model": "llama3.2:3b",
+  "user_input": "Меню RPG игры \"Eclipse of Gods\" в мрачном стиле. Пункты: Новая игра, Продолжить, Настройки, Персонажи, Выход. В настройках: ползунок Звук, ползунок Музыка, чекбокс Полный экран, выбор Язык. В персонажах: Воин, Маг, Лучник.",
+  "raw_response": "```json\n{\n    \"interface\": {\n        \"name\": \"Eclipse of Gods Menu\",\n        \"navigationPoints\": [\n            \"New Game\",\n            \"Continue\",\n            \"Settings\",\n            \"Characters\",\n            \"Exit\"\n        ],\n        \"style\": {\n            \"colors\": [\"#2b2b2b\", \"#333333\", \"#444444\"],\n            \"fonts\": {\"fontFamily\": \"Arial\", \"fontSize\": 14},\n            \"layout\": {\"padding\": 20, \"margin\": 10},\n            \"roundedCorners\": true,\n            \"shadows\": false,\n            \"animations\": {\"transitionDuration\": 0.5}\n        },\n        \"subScreens\": {\n            \"New Game\": {\n                \"points\": [\"Start a new game\"],\n                \"interactives\": [\n                    {\"type\": \"Slider\", \"label\": \"Difficulty\", \"options\": [1\n[1, 2, 3]},\n                    {\"type\": \"Dropdown\", \"label\": \"Game Mode\", \"options\": [\n[\"Story\", \"Multiplayer\"]}\n                ]\n            },\n            \"Continue\": {\n                \"points\": [\"Load a saved game\"],\n                \"interactives\": [\n                    {\"type\": \"Slider\", \"label\": \"Restart Difficulty\", \"opti\n\"options\": [1, 2, 3]}\n                ]\n            },\n            \"Settings\": {\n                \"points\": [\"Adjust in-game settings\"],\n                \"interactives\": [\n                    {\"type\": \"Checkbox\", \"label\": \"Full Screen\"},\n                    {\"type\": \"Dropdown\", \"label\": \"Language\", \"options\": [\"\n[\"English\", \"Russian\", \"German\"]}\n                ]\n            },\n            \"Characters\": {\n                \"points\": [\"View characters and their stats\"],\n                \"interactives\": [\n                    {\"type\": \"TabbedSection\", \"tabs\": [\"Character 1\", \"Char\n\"Character 2\", \"Character 3\"]},\n                    {\"type\": \"Dropdown\", \"label\": \"Character Type\", \"option\n\"options\": [\"Warrior\", \"Mage\", \"Ranger\"]}\n                ]\n            },\n            \"Exit\": {\n                \"points\": [\"Quit the game\"],\n                \"interactives\": []\n            }\n        }\n    }\n}\n```",
+  "parsed_json": {
+    "title": "Eclipse of Gods",
+    "items": [
+      "Новая игра",
+      "Продолжить",
+      "Настройки",
+      "Персонажи",
+      "Выход"
+    ],
+    "style": {
+      "bg_color": "#1e1e2f",
+      "text_color": "#ffffff",
+      "button_bg": "#3a3a5a",
+      "button_hover": "#5a5a8a",
+      "font_family": "Arial, sans-serif",
+      "layout": "vertical",
+      "border_radius": "8px",
+      "text_transform": "uppercase"
+    },
+    "screens": {
+      "settings": {
+        "title": "Настройки",
+        "items": [],
+        "extra_components": [
+          {
+            "type": "slider",
+            "label": "Звук",
+            "min": 0,
+            "max": 100,
+            "value": 50
+          },
+          {
+            "type": "slider",
+            "label": "Музыка",
+            "min": 0,
+            "max": 100,
+            "value": 50
+          },
+          {
+            "type": "checkbox",
+            "label": "Полный экран",
+            "checked": false
+          },
+          {
+            "type": "select",
+            "label": "Язык",
+            "options": []
+          }
+        ]
+      },
+      "characters": {
+        "title": "Персонажи",
+        "items": [
+          "Воин",
+          "Маг",
+          "Лучник"
+        ],
+        "extra_components": []
+      }
+    }
+  },
+  "success": false
+}

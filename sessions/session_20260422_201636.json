@@ -1,0 +1,67 @@
+{
+  "timestamp": "20260422_201636",
+  "model": "llama3.2:3b",
+  "user_input": "Меню RPG игры \"Eclipse of Gods\" в мрачном стиле. Пункты: Новая игра, Продолжить, Настройки, Персонажи, Выход. В настройках: ползунок Звук, ползунок Музыка, чекбокс Полный экран, выбор Язык. В персонажах: Воин, Маг, Лучник.",
+  "raw_response": "```json\n{\n  \"Eclipse of Gods\": {\n    \"nav\": [\n      \"Новая игра\",\n      \"Продолжить\",\n      \"Настройки\",\n      \"Персонажи\",\n      \"Выход\"\n    ],\n    \"styles\": {\n      \"colors\": [\"#2f4f7f\", \"#3a3d41\"],\n      \"fonts\": [\"Arial\", \"Times New Roman\"],\n      \"positioning\": [\"center\", \"left\"],\n      \"corner_radius\": [5, 10],\n      \"shadows\": [\"0px 0px 10px rgba(0, 0, 0, 0.2)\"],\n      \"animations\": [\"ease-in-out\"]\n    },\n    \"screens\": {\n      \"настройки\": {\n        \"id\": \"settings\",\n        \"points\": [\n          \"Звук\"\n        ],\n        \"controls\": [\n          {\n            \"type\": \"slider\",\n            \"label\": \"Звук\"\n          },\n          {\n            \"type\": \"checkbox\",\n            \"label\": \"Полный экран\"\n          }\n        ]\n      },\n      \"персонажи\": {\n        \"id\": \"characters\",\n        \"points\": [\n          \"Воин\",\n          \"Маг\",\n          \"Лучник\"\n        ],\n        \"controls\": [\n          {\n            \"type\": \"radio\",\n            \"label\": \"Воин\",\n            \"value\": \"warrior\"\n          },\n          {\n            \"type\": \"radio\",\n            \"label\": \"Маг\",\n            \"value\": \"mage\"\n          },\n          {\n            \"type\": \"radio\",\n            \"label\": \"Лучник\",\n            \"value\": \"archer\"\n          }\n        ]\n      }\n    }\n  }\n}\n```",
+  "parsed_json": {
+    "title": "Меню",
+    "items": [
+      "Новая игра",
+      "Продолжить",
+      "Настройки",
+      "Персонажи",
+      "Выход"
+    ],
+    "style": {
+      "border_radius": [
+        5,
+        10
+      ]
+    },
+    "screens": {
+      "nastroyki": {
+        "title": "Настройки",
+        "items": [
+          "Звук"
+        ],
+        "extra_components": [
+          {
+            "type": "slider",
+            "label": "Звук",
+            "min": 0,
+            "max": 100,
+            "value": 50
+          },
+          {
+            "type": "checkbox",
+            "label": "Полный экран",
+            "checked": false
+          }
+        ]
+      },
+      "personazhi": {
+        "title": "Персонажи",
+        "items": [
+          "Воин",
+          "Маг",
+          "Лучник"
+        ],
+        "extra_components": [
+          {
+            "type": "text",
+            "content": "warrior"
+          },
+          {
+            "type": "text",
+            "content": "mage"
+          },
+          {
+            "type": "text",
+            "content": "archer"
+          }
+        ]
+      }
+    }
+  },
+  "success": true
+}

@@ -1,0 +1,89 @@
+{
+  "timestamp": "2026-05-18 13:52:03",
+  "model": "llama3.2:3b",
+  "title": "Файловый менеджер",
+  "success": true,
+  "html_file": "output\\menu_Файловый_менеджер.html",
+  "user_input": "Интерфейс файлового менеджера в светло-синем корпоративном стиле.\nПункты меню: Дашборд, Общие, Избранное, Корзина, Помощь, Настройки.\nНа главной: счётчики файлов по типам (изображения, документы, музыка),\nпапки с размером и количеством файлов, таблица последних файлов,\nкруговой индикатор использования хранилища.\nВ настройках: ползунок квоты, чекбокс автосинхронизации,\nвыбор сортировки, поле поиска. Белый фон, синий сайдбар,\nкарточки с тенями, закруглённые углы, сетка.",
+  "parsed_json": {
+    "title": "Файловый менеджер",
+    "items": [
+      "Дашборд",
+      "Общие",
+      "Иzbранное",
+      "Корзина",
+      "Помощь",
+      "Настройки"
+    ],
+    "style": {
+      "bg_color": "#F7F7F7",
+      "text_color": "#333333",
+      "button_bg": "#4CAF50",
+      "button_hover": "#3e8e41",
+      "font_family": "Arial, sans-serif",
+      "layout": "horizontal",
+      "border_radius": "8px",
+      "box_shadow": "0 2px 8px rgba(0,0,0,0.4)"
+    },
+    "screens": {
+      "dashbord": {
+        "title": "Дашборд",
+        "items": [
+          "Счётчики файлов по типам",
+          "Таблица последних файлов"
+        ],
+        "extra_components": [
+          {
+            "type": "slider",
+            "label": "Папки с размером и количеством файлов",
+            "min": 0,
+            "max": 100,
+            "value": 50
+          }
+        ]
+      },
+      "obschie": {
+        "title": "Общие",
+        "items": [],
+        "extra_components": []
+      },
+      "izbrannoe": {
+        "title": "Иzbранное",
+        "items": [],
+        "extra_components": []
+      },
+      "korzina": {
+        "title": "Корзина",
+        "items": [],
+        "extra_components": []
+      },
+      "pomosch": {
+        "title": "Помощь",
+        "items": [],
+        "extra_components": []
+      },
+      "nastroyki": {
+        "title": "Настройки",
+        "items": [
+          "Квота",
+          "Автосинхронизация"
+        ],
+        "extra_components": [
+          {
+            "type": "slider",
+            "label": "Громкость",
+            "min": 0,
+            "max": 100,
+            "value": 50
+          },
+          {
+            "type": "checkbox",
+            "label": "Уведомления",
+            "checked": true
+          }
+        ]
+      }
+    }
+  },
+  "raw_response": "{\n  \"title\": \"Файловый менеджер\",\n  \"items\": [\n    \"Дашборд\",\n    \"Общие\",\n    \"Иzbранное\",\n    \"Корзина\",\n    \"Помощь\",\n    \"Настройки\"\n  ],\n  \"style\": {\n    \"bg_color\": \"#F7F7F7\",\n    \"text_color\": \"#333333\",\n    \"button_bg\": \"#4CAF50\",\n    \"button_hover\": \"#3e8e41\",\n    \"font_family\": \"Arial, sans-serif\",\n    \"border_radius\": \"8px\",\n    \"box_shadow\": \"0 2px 8px rgba(0,0,0,0.4)\",\n    \"layout\": \"horizontal\"\n  },\n  \"screens\": {\n    \"Дашборд\": {\n      \"title\": \"Дашборд\",\n      \"items\": [\n        {\"title\": \"Счётчики файлов по типам\"},\n        {\"title\": \"Папки с размером и количеством файлов\"},\n        {\"title\": \"Таблица последних файлов\"}\n      ],\n      \"extra_components\": []\n    },\n    \"Общие\": {\n      \"title\": \"Общие\",\n      \"items\": [],\n      \"extra_components\": []\n    },\n    \"Иzbранное\": {\n      \"title\": \"Иzbранное\",\n      \"items\": [],\n      \"extra_components\": []\n    },\n    \"Корзина\": {\n      \"title\": \"Корзина\",\n      \"items\": [],\n      \"extra_components\": []\n    },\n    \"Помощь\": {\n      \"title\": \"Помощь\",\n      \"items\": [],\n      \"extra_components\": []\n    },\n    \"Настройки\": {\n      \"title\": \"Настройки\",\n      \"items\": [\n        {\"title\": \"Квота\"},\n        {\"title\": \"Автосинхронизация\"}\n      ],\n      \"extra_components\": [\n        {\"type\": \"slider\", \"label\": \"Громкость\", \"min\": 0, \"max\": 100, \"value\": 50},\n        {\"type\": \"checkbox\", \"label\": \"Уведомления\", \"checked\": true}\n      ]\n    }\n  }\n}"
+}

@@ -1,0 +1,70 @@
+{
+  "timestamp": "2026-05-14 18:01:49",
+  "model": "llama3.2:3b",
+  "title": "Музыкальный плеер в минималистичном тёмном стиле",
+  "success": false,
+  "html_file": "output\\menu_Музыкальный_плеер_в_минималистичном_тёмном_стиле.html",
+  "user_input": "Музыкальный плеер в минималистичном тёмном стиле. Пункты: Сейчас играет, Плейлисты, Библиотека, Поиск, Настройки.\nВ настройках: ползунок громкости, ползунок эквалайзера баса, ползунок высоких частот, чекбокс нормализация звука, выбор качества аудио (128/320/FLAC).\nВ плейлистах: Избранное, Недавние, Мои плейлисты, Создать новый.\nТёмный фон #121212, акцент зелёный #1db954 (Spotify-стиль), layout горизонтальный, скругление 20px.",
+  "parsed_json": {
+    "title": "Музыкальный плеер в минималистичном тёмном стиле",
+    "items": [
+      "Сейчас играет",
+      "Плейлисты",
+      "Библиотека",
+      "Поиск",
+      "Настройки"
+    ],
+    "style": {
+      "bg_color": "#1e1e2f",
+      "text_color": "#ffffff",
+      "button_bg": "#3a3a5a",
+      "button_hover": "#5a5a8a",
+      "font_family": "Arial, sans-serif",
+      "layout": "vertical",
+      "border_radius": "8px",
+      "text_transform": "uppercase"
+    },
+    "screens": {
+      "settings": {
+        "title": "Настройки",
+        "items": [],
+        "extra_components": [
+          {
+            "type": "slider",
+            "label": "громкости",
+            "min": 0,
+            "max": 100,
+            "value": 50
+          },
+          {
+            "type": "slider",
+            "label": "эквалайзера баса",
+            "min": 0,
+            "max": 100,
+            "value": 50
+          },
+          {
+            "type": "slider",
+            "label": "высоких частот",
+            "min": 0,
+            "max": 100,
+            "value": 50
+          },
+          {
+            "type": "slider",
+            "label": "чекбокс нормализация а",
+            "min": 0,
+            "max": 100,
+            "value": 50
+          },
+          {
+            "type": "select",
+            "label": "качества аудио (128/320/FLAC)",
+            "options": []
+          }
+        ]
+      }
+    }
+  },
+  "raw_response": "{\"title\": \"Музыкальный плеер\", \"items\": [\"Сейчас играет\", \"Плейлисты\", \"Биб\n\"Библиотека\", \"Поиск\", \"Настройки\"], \"style\": {\"bg_color\": \"#121212\", \"text\n\"text_color\": \"#1db954\", \"button_bg\": \"#1db954\", \"button_hover\": \"#2e8b8b\",\n\"#2e8b8b\", \"font_family\": \"Arial\", \"layout\": \"horizontal/grid\", \"border_rad\n\"border_radius\": 20, \"box_shadow\": \"0px 0px 10px rgba(0, 0, 0, 0.5)\"}, \"scr\n\"screens\": {\"settings\": {\"title\": \"Настройки\", \"items\": [\"Громкость\", \"Эква\n\"Эквалайзер баса\", \"Высокие частоты\"], \"extra_components\": [{\"type\": \"slide\n\"slider\", \"label\": \"Громкость\", \"min\": 0, \"max\": 100, \"value\": 50}, {\"type\"\n{\"type\": \"checkbox\", \"label\": \"Нормализация звука\"}, {\"type\": \"select\", \"la\n\"label\": \"Качество аудио\", \"options\": [\"128\", \"320\", \"FLAC\"]}]}, \"profile\":\n\"profile\": {\"title\": \"Профиль\", \"items\": [\"Редактировать\", \"Фото\", \"Выход\"]\n\"Выход\"], \"extra_components\": []}}"
+}

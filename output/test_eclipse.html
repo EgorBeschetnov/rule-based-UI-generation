@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclipse of Gods</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: #0d0d0d;
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            color: #c0a060;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            transition: background 0.3s ease;
+        }
+
+        .screen { display: none; width: 100%; max-width: 900px; }
+        .screen.active { display: block; }
+
+        .menu-container {
+            width: 100%;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 20px;
+            background: rgba(0,0,0,0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-shadow: 0 0 15px currentColor;
+        }
+
+        .button-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .menu-btn {
+            background: #1a1a1a;
+            border: 1px solid rgba(255,255,255,0.1);
+            color: #c0a060;
+            padding: 15px 40px;
+            font-size: 1.3rem;
+            font-family: inherit;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 4px;
+            box-shadow: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 180px;
+            letter-spacing: 1px;
+        }
+
+        .menu-btn:hover { background: #2a2a2a; transform: scale(1.05); }
+        .menu-btn.back-btn { background: #555; border-color: #777; }
+        .menu-btn.back-btn:hover { background: #777; }
+
+        /* Компоненты */
+        .components-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 20px;
+            max-width: 500px;
+            margin: 0 auto 30px;
+        }
+
+        .component-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+        }
+
+        .component-label {
+            font-size: 1.05rem;
+            min-width: 140px;
+            text-align: left;
+            opacity: 0.9;
+        }
+
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 190px;
+            height: 6px;
+            background: #1a1a1a;
+            border-radius: 3px;
+            outline: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            background: #2a2a2a;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.15s;
+        }
+
+        input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.2); }
+
+        .slider-value {
+            min-width: 35px;
+            text-align: right;
+            font-size: 0.95rem;
+            opacity: 0.7;
+        }
+
+        input[type="checkbox"] {
+            width: 22px;
+            height: 22px;
+            accent-color: #2a2a2a;
+            cursor: pointer;
+        }
+
+        select {
+            background: #1a1a1a;
+            color: #c0a060;
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 8px 14px;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+            cursor: pointer;
+            outline: none;
+        }
+
+        input[type="text"] {
+            background: #1a1a1a;
+            color: #c0a060;
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+            width: 200px;
+            outline: none;
+        }
+
+        input[type="text"]::placeholder { opacity: 0.45; }
+
+        .static-text {
+            opacity: 0.55;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 4px 0;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .menu-btn { padding: 12px 25px; font-size: 1.1rem; min-width: 140px; }
+            input[type="range"] { width: 130px; }
+        }
+        </style>
+</head>
+<body>
+<div id="screen-main" class="screen active">
+    <div class="menu-container">
+        <h1>Eclipse of Gods</h1>
+        <div class="button-wrapper">
+            <button class="menu-btn">Новая игра</button>
+            <button class="menu-btn">Продолжить</button>
+            <button class="menu-btn" onclick="showScreen('settings')">Настройки</button>
+            <button class="menu-btn" onclick="showScreen('characters')">Персонажи</button>
+            <button class="menu-btn">Выход</button>
+        </div>
+    </div>
+</div>
+<div id="screen-settings" class="screen">
+    <div class="menu-container">
+        <h1>Настройки</h1>
+        <div class="components-wrapper">
+            <div class="component-row">
+                <span class="component-label">Звук</span>
+                <input type="range" id="звук" min="0" max="100" value="70" oninput="document.getElementById('звук_val').textContent=this.value">
+                <span class="slider-value" id="звук_val">70</span>
+            </div>
+            <div class="component-row">
+                <span class="component-label">Полный экран</span>
+                <input type="checkbox" id="полный_экран" >
+            </div>
+        </div>
+        <div class="button-wrapper">
+            <button class="menu-btn">Общие</button>
+            <button class="menu-btn">Графика</button>
+            <button class="menu-btn back-btn" onclick="showScreen('main')">Назад</button>
+        </div>
+    </div>
+</div>
+<div id="screen-characters" class="screen">
+    <div class="menu-container">
+        <h1>Персонажи</h1>
+        <div class="button-wrapper">
+            <button class="menu-btn">Воин</button>
+            <button class="menu-btn">Маг</button>
+            <button class="menu-btn">Лучник</button>
+            <button class="menu-btn back-btn" onclick="showScreen('main')">Назад</button>
+        </div>
+    </div>
+</div>
+
+<script>
+        function showScreen(screenId) {
+            document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+            const target = document.getElementById('screen-' + screenId);
+            if (target) target.classList.add('active');
+            else console.warn('Screen not found: screen-' + screenId);
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const active = document.querySelector('.screen.active');
+                if (active && active.id !== 'screen-main') showScreen('main');
+            }
+        });
+        </script>
+</body>
+</html>

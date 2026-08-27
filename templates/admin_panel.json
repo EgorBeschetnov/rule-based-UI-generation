@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "name": "Панель администратора",
+    "description": "Корпоративный стиль, горизонтальный layout, управление сервером"
+  },
+  "title": "Control Panel",
+  "items": ["Мониторинг", "Пользователи", "База данных", "Безопасность", "Настройки"],
+  "style": {
+    "bg_color": "#0d1117",
+    "text_color": "#00ff41",
+    "button_bg": "#161b22",
+    "button_hover": "#21262d",
+    "font_family": "'Courier New', monospace",
+    "layout": "horizontal",
+    "border_radius": "2px",
+    "text_transform": "uppercase",
+    "box_shadow": "0 0 8px rgba(0,255,65,0.3)",
+    "animation": "scale(1.02)"
+  },
+  "screens": {
+    "settings": {
+      "title": "Настройки",
+      "items": [],
+      "extra_components": [
+        {"type": "slider", "label": "Интервал обновления", "min": 1, "max": 60, "value": 5},
+        {"type": "checkbox", "label": "Автообновление", "checked": true},
+        {"type": "checkbox", "label": "Звуковые оповещения", "checked": false},
+        {"type": "select", "label": "Часовой пояс", "options": ["UTC+3", "UTC+0", "UTC-5"]},
+        {"type": "select", "label": "Тема", "options": ["Зелёная", "Синяя", "Красная"]}
+      ]
+    },
+    "security": {
+      "title": "Безопасность",
+      "items": ["Брандмауэр", "Доступы", "Журнал событий", "Блокировки"],
+      "extra_components": []
+    }
+  }
+}

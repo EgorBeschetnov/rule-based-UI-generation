@@ -1,0 +1,68 @@
+{
+  "timestamp": "20260422_201923",
+  "model": "llama3.2:3b",
+  "user_input": "Меню RPG игры \"Eclipse of Gods\" в мрачном стиле. Пункты: Новая игра, Продолжить, Настройки, Персонажи, Выход. В настройках: ползунок Звук, ползунок Музыка, чекбокс Полный экран, выбор Язык. В персонажах: Воин, Маг, Лучник.",
+  "raw_response": "```json\n{\n  \"menu\": {\n    \"name\": \"Eclipse of Gods\",\n    \"navItems\": [\n      {\"label\": \"Новая игра\", \"icon\": \"newGameIcon\"},\n      {\"label\": \"Продолжить\", \"icon\": \"continueGameIcon\"}\n    ]\n  },\n  \"settings\": {\n    \"id\": \"settingsScreen\",\n    \"name\": \"Настройки\",\n    \"navItems\": [\n      {\"label\": \"Звук\", \"icon\": \"volumeIcon\"},\n      {\"label\": \"Музыка\", \"icon\": \"musicIcon\"},\n      {\"label\": \"Полный экран\", \"icon\": \"fullScreenIcon\"}\n    ],\n    \"items\": [\n      {\"label\": \"Ползунок Звук\", \"type\": \"slider\", \"id\": \"soundLevelSlider\"\n\"soundLevelSlider\"},\n      {\"label\": \"Ползунок Музыка\", \"type\": \"slider\", \"id\": \"musicLevelSlide\n\"musicLevelSlider\"},\n      {\"label\": \"Чекбокс Полный экран\", \"type\": \"checkbox\", \"id\": \"fullScre\n\"fullScreenCheckBox\"},\n      {\"label\": \"Выбор Язык\", \"type\": \"select\", \"id\": \"languageSelect\"}\n    ]\n  },\n  \"characters\": {\n    \"id\": \"characterScreen\",\n    \"name\": \"Персонажи\",\n    \"navItems\": [\n      {\"label\": \"Воин\", \"icon\": \"warriorIcon\"},\n      {\"label\": \"Маг\", \"icon\": \"wizardIcon\"},\n      {\"label\": \"Лучник\", \"icon\": \"archerIcon\"}\n    ],\n    \"items\": [\n      {\"label\": \"Ползунок level1\", \"type\": \"slider\", \"id\": \"level1Slider\"},\n\"level1Slider\"},\n      {\"label\": \"Ползунок level2\", \"type\": \"slider\", \"id\": \n\"level2Slider\"},\n      {\"label\": \"Ползунок level3\", \"type\": \"slider\", \"id\": \"level3Slider\"}\n    ]\n  },\n  \"footer\": {\n    \"items\": [\n      {\"label\": \"Выход\", \"icon\": \"exitIcon\"}\n    ]\n  }\n}\n```",
+  "parsed_json": {
+    "title": "Eclipse of Gods",
+    "items": [
+      "Новая игра",
+      "Продолжить",
+      "Настройки",
+      "Персонажи",
+      "Выход"
+    ],
+    "style": {
+      "bg_color": "#1e1e2f",
+      "text_color": "#ffffff",
+      "button_bg": "#3a3a5a",
+      "button_hover": "#5a5a8a",
+      "font_family": "Arial, sans-serif",
+      "layout": "vertical",
+      "border_radius": "8px",
+      "text_transform": "uppercase"
+    },
+    "screens": {
+      "settings": {
+        "title": "Настройки",
+        "items": [],
+        "extra_components": [
+          {
+            "type": "slider",
+            "label": "Звук",
+            "min": 0,
+            "max": 100,
+            "value": 50
+          },
+          {
+            "type": "slider",
+            "label": "Музыка",
+            "min": 0,
+            "max": 100,
+            "value": 50
+          },
+          {
+            "type": "checkbox",
+            "label": "Полный экран",
+            "checked": false
+          },
+          {
+            "type": "select",
+            "label": "Язык",
+            "options": []
+          }
+        ]
+      },
+      "characters": {
+        "title": "Персонажи",
+        "items": [
+          "Воин",
+          "Маг",
+          "Лучник"
+        ],
+        "extra_components": []
+      }
+    }
+  },
+  "success": false
+}

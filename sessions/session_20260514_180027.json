@@ -1,0 +1,53 @@
+{
+  "timestamp": "2026-05-14 18:00:27",
+  "model": "llama3.2:3b",
+  "title": "Калькулятор в стиле iOS",
+  "success": false,
+  "html_file": "output\\menu_Калькулятор_в_стиле_iOS.html",
+  "user_input": "Калькулятор в стиле iOS. Пункты: Стандартный, Инженерный, История, Настройки.\nНа главном экране: кнопки цифр 0-9, операции +/-/*//=, кнопка AC и скобки, дисплей с результатом.\nВ инженерном: тригонометрия, логарифмы, степени.\nВ настройках: выбор темы (Светлая/Тёмная/OLED), выбор точности, чекбокс звук кнопок.\nТёмный фон #1c1c1e, кнопки #333333, акцент оранжевый #ff9500, шрифт без засечек, скругление 50%.",
+  "parsed_json": {
+    "title": "Калькулятор в стиле iOS",
+    "items": [
+      "Стандартный",
+      "Инженерный",
+      "История",
+      "Настройки"
+    ],
+    "style": {
+      "bg_color": "#1e1e2f",
+      "text_color": "#ffffff",
+      "button_bg": "#3a3a5a",
+      "button_hover": "#5a5a8a",
+      "font_family": "Arial, sans-serif",
+      "layout": "vertical",
+      "border_radius": "8px",
+      "text_transform": "uppercase"
+    },
+    "screens": {
+      "settings": {
+        "title": "Настройки",
+        "items": [],
+        "extra_components": [
+          {
+            "type": "select",
+            "label": "темы (Светлая/Тёмная/OLED)",
+            "options": []
+          },
+          {
+            "type": "select",
+            "label": "точности",
+            "options": []
+          },
+          {
+            "type": "slider",
+            "label": "чекбокс  кнопок",
+            "min": 0,
+            "max": 100,
+            "value": 50
+          }
+        ]
+      }
+    }
+  },
+  "raw_response": "{\n\"title\": \"Калькулятор в стиле iOS\",\n\"items\": [\n\"Стандартный\",\n\"Инженерный\",\n\"История\",\n\"Настройки\"\n],\n\"style\": {\n\"bg_color\": \"#1c1c1e\",\n\"text_color\": \"#ffffff\",\n\"button_bg\": \"#333333\",\n\"button_hover\": \"#333333\",\n\"font_family\": \" sans-serif \",\n\"layout\": \" horizontal \",\n\"border_radius\": 50,\n\"box_shadow\": \"0px 2px 4px rgba(0, 0, 0, 0.1)\"\n},\n\"screens\": {\n\"Стандартный\": {\n\"title\": \"Стандартный\",\n\"items\": [\n\"0\",\n\"+/-/*//=\"\n],\n\"extra_components\": []\n},\n\"Inженерный\": {\n\"title\": \"Инженерный\",\n\"items\": [],\n\"extra_components\": [\n{\"type\": \"slider\", \"label\": \"Громкость\", \"min\": 0, \"max\": 100, \"value\": 50}\n50},\n{\"type\": \"checkbox\", \"label\": \"Уведомления\", \"checked\": true},\n{\"type\": \"select\", \"label\": \"Язык\", \"options\": [\"Русский\", \"English\"]}\n]\n},\n\"История\": {\n\"title\": \"История\",\n\"items\": [],\n\"extra_components\": []\n},\n\"Настройки\": {\n\"title\": \"Настройки\",\n\"items\": [\n\"Тема\",\n\"Точность\"\n],\n\"extra_components\": [\n{\"type\": \"checkbox\", \"label\": \"Звук кнопок\", \"checked\": false}\n]\n}\n}}"
+}

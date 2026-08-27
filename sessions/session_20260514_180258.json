@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-05-14 18:02:58",
+  "model": "llama3.2:3b",
+  "title": "Меню",
+  "success": false,
+  "html_file": "output\\menu_Меню.html",
+  "user_input": "Создай дашборд аналитики в тёмном стиле с боковым меню.\nПункты навигации: Главная, События, Задачи, Аналитика, Хранилище, Настройки.\nНа главной: карточки со статистикой (пользователи, продажи, события),\nграфик активности, список последних событий, индикатор загрузки файлов.\nВ настройках: ползунок уведомлений, переключатель темы, выбор языка,\nполе Email. Тёмно-фиолетовый фон, акценты фиолетовым и розовым,\nшрифт без засечек, сетка карточек.",
+  "parsed_json": {
+    "title": "Меню",
+    "items": [
+      "Главная",
+      "События",
+      "Задачи",
+      "Аналитика",
+      "Хранилище",
+      "Настройки"
+    ],
+    "style": {
+      "bg_color": "#1e1e2f",
+      "text_color": "#ffffff",
+      "button_bg": "#3a3a5a",
+      "button_hover": "#5a5a8a",
+      "font_family": "Arial, sans-serif",
+      "layout": "vertical",
+      "border_radius": "8px",
+      "text_transform": "uppercase"
+    },
+    "screens": {
+      "settings": {
+        "title": "Настройки",
+        "items": [],
+        "extra_components": [
+          {
+            "type": "slider",
+            "label": "уведомлений",
+            "min": 0,
+            "max": 100,
+            "value": 50
+          },
+          {
+            "type": "checkbox",
+            "label": "темы",
+            "checked": false
+          },
+          {
+            "type": "select",
+            "label": "языка",
+            "options": []
+          },
+          {
+            "type": "input",
+            "label": "Email",
+            "placeholder": ""
+          }
+        ]
+      }
+    }
+  },
+  "raw_response": "{\n\"title\": \"Дашборд аналитики\",\n\"items\": [\n  \"Главная\",\n  \"События\",\n  \"Задачи\",\n  \"Аналитика\",\n  \"Хранилище\",\n  \"Настройки\"\n],\n\"style\": {\n  \"bg_color\": \"#2f4f7f\",\n  \"text_color\": \"#ffffff\",\n  \"button_bg\": \"#3b5998\",\n  \"button_hover\": \"#4c5660\",\n  \"font_family\": \"sans-serif\",\n  \"layout\": \"vertical\",\n  \"border_radius\": 10,\n  \"box_shadow\": \"0 2px 4px rgba(0, 0, 0, 0.1)\"\n},\n\"screens\": {\n  \"Главная\": {\n    \"title\": \"\",\n    \"items\": [\n      {\"title\": \"Пользователи\"},\n      {\"title\": \"Продажи\"},\n      {\"title\": \"События\"}\n    ],\n    \"extra_components\": [\n      {\"type\": \"slider\", \"label\": \"Громкость\", \"min\": 0, \"max\": 100, \"value\n\"value\": 50},\n      {\"type\": \"checkbox\", \"label\": \"Уведомления\", \"checked\": true},\n      {\"type\": \"select\", \"label\": \"Язык\", \"options\": [\"Русский\", \"English\"]\n\"English\"]}\n    ]\n  },\n  \"События\": {\n    \"title\": \"\",\n    \"items\": [],\n    \"extra_components\": []\n  },\n  \"Задачи\": {\n    \"title\": \"\",\n    \"items\": [],\n    \"extra_components\": []\n  },\n  \"Аналитика\": {\n    \"title\": \"\",\n    \"items\": [\n      {\"title\": \"Аналитика users\"},\n      {\"title\": \"Аналитика sales\"},\n      {\"title\": \"Аналитика events\"}\n    ],\n    \"extra_components\": []\n  },\n  \"Хранилище\": {\n    \"title\": \"\",\n    \"items\": [],\n    \"extra_components\": []\n  },\n  \"Настройки\": {\n    \"title\": \"\",\n    \"items\": [\n      {\"title\": \"Редактировать\"},\n      {\"title\": \"Фото\"},\n      {\"title\": \"Выход\"}\n    ],\n    \"extra_components\": [\n      {\"type\": \"slider\", \"label\": \"Громкость\", \"min\": 0, \"max\": 100, \"value\n\"value\": 50},\n      {\"type\": \"checkbox\", \"label\": \"Уведомления\", \"checked\": true},\n      {\"type\": \"select\", \"label\": \"Язык\", \"options\": [\"Русский\", \"English\"]\n\"English\"]}\n    ]\n  }\n}"
+}

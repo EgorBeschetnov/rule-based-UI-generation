@@ -1,0 +1,30 @@
+{
+  "timestamp": "20260417_210419",
+  "model": "llama3.2:3b",
+  "user_input": "меню для мрачной RPG игры в стилистике Dark Souls, название \"Eclipse of Gods\", пункты: Новая игра, Продолжить, Настройки, Галерея, Выход",
+  "raw_response": "{\n  \"title\": \"Осень Божеств\",\n  \"items\": [\"Новая игра\", \"Продолжить\", \"Настройки\", \"Галерея\", \"Выход\"],\n  \"style\": {\n    \"bg_color\": \"#3B3F54\",\n    \"text_color\": \"#FFFFFF\",\n    \"button_bg\": \"#4C5154\",\n    \"button_hover\": \"#5C6766\",\n    \"font_family\": \"-apple-system, sans-serif\",\n    \"layout\": \"grid\",\n    \"border_radius\": \"8px\",\n    \"text_transform\": \"none\",\n    \"box_shadow\": \"-1px 0 rgba(255,255,255,0.5)\",\n    \"animation\": \"scale(1.05)\"\n  },\n  \"extra_components\": []\n}",
+  "parsed_json": {
+    "title": "Осень Божеств",
+    "items": [
+      "Новая игра",
+      "Продолжить",
+      "Настройки",
+      "Галерея",
+      "Выход"
+    ],
+    "style": {
+      "bg_color": "#3B3F54",
+      "text_color": "#FFFFFF",
+      "button_bg": "#4C5154",
+      "button_hover": "#5C6766",
+      "font_family": "-apple-system, sans-serif",
+      "layout": "grid",
+      "border_radius": "8px",
+      "text_transform": "none",
+      "box_shadow": "-1px 0 rgba(255,255,255,0.5)",
+      "animation": "scale(1.05)"
+    },
+    "extra_components": []
+  },
+  "success": true
+}

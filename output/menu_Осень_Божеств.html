@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Осень Божеств</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #3B3F54;
+            font-family: -apple-system, sans-serif;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .menu-container {
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 20px;
+            background: rgba(0,0,0,0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-shadow: 0 0 15px currentColor;
+        }
+
+        .button-wrapper {
+            
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            
+            margin-bottom: 30px;
+        }
+
+        .menu-btn {
+            background: #4C5154;
+            border: none;
+            color: #FFFFFF;
+            padding: 15px 40px;
+            font-size: 1.4rem;
+            font-family: inherit;
+            font-weight: bold;
+            text-transform: none;
+            border-radius: 8px;
+            box-shadow: -1px 0 rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 180px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .menu-btn:hover {
+            background: #5C6766;
+            transform: scale(1.05);
+        }
+
+        .back-btn {
+            background: #555;
+        }
+
+        .back-btn:hover {
+            background: #777;
+        }
+
+        .screen {
+            display: none;
+        }
+
+        .screen.active {
+            display: block;
+        }
+
+        /* Для дополнительных компонентов (если остались) */
+        .extra-components {
+            margin-top: 20px;
+        }
+        .settings-panel {
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: left;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .settings-panel h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .slider-container, .checkbox-container {
+            margin: 10px 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        </style>
+</head>
+<body>
+<div id="screen-main" class="screen active">
+    <div class="menu-container">
+        <h1>Осень Божеств</h1>
+        <div class="button-wrapper">
+            <button class="menu-btn" onclick="alert('Вы нажали: Новая игра')">Новая игра</button>
+            <button class="menu-btn" onclick="alert('Вы нажали: Продолжить')">Продолжить</button>
+            <button class="menu-btn" onclick="alert('Вы нажали: Настройки')">Настройки</button>
+            <button class="menu-btn" onclick="alert('Вы нажали: Галерея')">Галерея</button>
+            <button class="menu-btn" onclick="alert('Вы нажали: Выход')">Выход</button>
+        </div>
+    </div>
+</div>
+
+<script>
+        function showScreen(screenId) {
+            // Скрываем все экраны
+            document.querySelectorAll('.screen').forEach(screen => {
+                screen.classList.remove('active');
+            });
+            // Показываем выбранный
+            const target = document.getElementById('screen-' + screenId);
+            if (target) {
+                target.classList.add('active');
+            }
+        }
+
+        // Дополнительно: обработка для кнопок, у которых есть data атрибуты (на случай расширения)
+        document.addEventListener('DOMContentLoaded', function() {
+            // Можно добавить инициализацию
+        });
+        </script>
+</body>
+</html>

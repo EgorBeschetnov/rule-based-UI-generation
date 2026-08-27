@@ -1,0 +1,17 @@
+{
+  "timestamp": "20260422_200439",
+  "model": "llama3.2:3b",
+  "user_input": "Меню RPG игры \"Eclipse of Gods\" в мрачном стиле. Пункты: Новая игра, Продолжить, Настройки, Персонажи, Выход. В настройках: ползунок Звук, ползунок Музыка, чекбокс Полный экран, выбор Язык. В персонажах: Воин, Маг, Лучник.",
+  "raw_response": "```json\n{\n  \"interface\": {\n    \"title\": \"Меню RPG игры \\\"Eclipse of Gods\\\"\",\n    \"navigation\": [\n      \"Новая игра\",\n      \"Продолжить\",\n      \"Настройки\",\n      \"Персонажи\",\n      \"Выход\"\n    ],\n    \"styling\": {\n      \"colors\": [\"#333333\", \"#444444\"],\n      \"font\": {\"family\": \"Arial\", \"size\": 14},\n      \"layout\": {\"padding\": 20, \"margin\": 10},\n      \"roundedCorners\": true,\n      \"shadows\": true,\n      \"animations\": {\"transitionDuration\": 0.5}\n    },\n    \"subscreens\": {\n      \"настройки\": {\n        \"points\": [\"Звук\", \"Музыка\", \"Полный экран\", \"Язык\"],\n        \"elements\": [\n          {\"type\": \"slider\", \"id\": \"sound-slider\"},\n          {\"type\": \"checkbox\", \"id\": \"music-checkbox\"},\n          {\"type\": \"radio\", \"id\": \"full-screen-radio\"},\n          {\"type\": \"dropdown\", \"id\": \"language-dropdown\"}\n        ]\n      },\n      \"персонажи\": {\n        \"points\": [\"Воин\", \"Маг\", \"Лучник\"],\n        \"elements\": [\n          {\"type\": \"button\", \"id\": \"character-select-button\"},\n          {\"type\": \"text\", \"id\": \"character-name-text\"}\n        ]\n      }\n    },\n    \"identifiers\": {\n      \"настройки\": \"settings\",\n      \"персонажи\": \"characters\"\n    }\n  }\n}\n```",
+  "parsed_json": {
+    "title": "Меню",
+    "items": [
+      "Пункт 1",
+      "Пункт 2",
+      "Пункт 3"
+    ],
+    "style": {},
+    "screens": {}
+  },
+  "success": true
+}

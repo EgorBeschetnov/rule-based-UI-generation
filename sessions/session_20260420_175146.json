@@ -1,0 +1,72 @@
+{
+  "timestamp": "20260420_175146",
+  "model": "llama3.2:3b",
+  "user_input": "Административная панель \"ServerControl Pro\" в стиле киберпанк, чёрный фон, неоново-зелёные элементы, моноширинный шрифт, горизонтальный layout. Пункты: Мониторинг, Пользователи, База данных, Безопасность, Настройки, Выход. В настройках: ползунок Интервал обновления, ползунок Лимит логов, чекбокс Автообновление, чекбокс Звуковые оповещения, выбор Часовой пояс, выбор Тема оформления. В безопасности: Брандмауэр, Доступы, Журнал событий, Блокировки.",
+  "raw_response": "{\n  \"title\": \"Административная панель ServerControl Pro\",\n  \"items\": [\"Мониторинг\", \"Пользователи\", \"База данных\", \"Безопасность\"],\n  \"style\": {\n    \"bg_color\": \"#000000\",\n    \"text_color\": \"#33CCFF\",\n    \"button_bg\": \"#33CCFF\",\n    \"button_hover\": \"#00FFFF\",\n    \"font_family\": \"-monospace\",\n    \"layout\": \"horizontal\"\n  },\n  \"screens\": {\n    \"admin\": {\n      \"title\": \"Административная панель ServerControl Pro\",\n      \"items\": [\"Мониторинг\", \"Пользователи\", \"База данных\", \"Безопасность\"\u001b[14D\u001b[K\n\"Безопасность\"],\n      \"extra_components\": [\n        {\"type\": \"slider\", \"label\": \"Интервал обновления\", \"min\": 0, \"max\":\u001b[6D\u001b[K\n\"max\": 100, \"value\": 50},\n        {\"type\": \"checkbox\", \"label\": \"Автообновление\", \"checked\": false},\n        {\"type\": \"select\", \"label\": \"Язык\", \"options\": [\"Русский\", \"English\u001b[8D\u001b[K\n\"English\"]}\n      ]\n    }\n  }\n}",
+  "parsed_json": {
+    "title": "ServerControl Pro",
+    "items": [
+      "Мониторинг",
+      "Пользователи",
+      "База данных",
+      "Безопасность",
+      "Настройки",
+      "Выход"
+    ],
+    "style": {
+      "bg_color": "#1e1e2f",
+      "text_color": "#ffffff",
+      "button_bg": "#3a3a5a",
+      "button_hover": "#5a5a8a",
+      "font_family": "Arial, sans-serif",
+      "layout": "vertical",
+      "border_radius": "8px",
+      "text_transform": "uppercase"
+    },
+    "screens": {
+      "settings": {
+        "title": "Настройки",
+        "items": [],
+        "extra_components": [
+          {
+            "type": "slider",
+            "label": "Интервал обновления",
+            "min": 0,
+            "max": 100,
+            "value": 50
+          },
+          {
+            "type": "slider",
+            "label": "Лимит логов",
+            "min": 0,
+            "max": 100,
+            "value": 50
+          },
+          {
+            "type": "checkbox",
+            "label": "Автообновление",
+            "checked": false
+          },
+          {
+            "type": "slider",
+            "label": "чекбокс овые оповещения",
+            "min": 0,
+            "max": 100,
+            "value": 50
+          },
+          {
+            "type": "select",
+            "label": "Часовой пояс",
+            "options": []
+          },
+          {
+            "type": "select",
+            "label": "Тема оформления",
+            "options": []
+          }
+        ]
+      }
+    }
+  },
+  "success": false
+}

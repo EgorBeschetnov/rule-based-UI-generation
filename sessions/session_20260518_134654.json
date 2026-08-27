@@ -1,0 +1,48 @@
+{
+  "timestamp": "2026-05-18 13:46:54",
+  "model": "llama3.2:3b",
+  "title": "Простое меню",
+  "success": true,
+  "html_file": "",
+  "user_input": "Простое меню приложения: Главная, Настройки, О программе",
+  "parsed_json": {
+    "title": "Простое меню",
+    "items": [
+      "Главная",
+      "Настройки",
+      "О программе"
+    ],
+    "style": {
+      "bg_color": "#ffffff",
+      "text_color": "#000000",
+      "button_bg": "#333333",
+      "button_hover": "#444444",
+      "font_family": "Arial",
+      "layout": "vertical",
+      "border_radius": "8px",
+      "box_shadow": "0 2px 8px rgba(0,0,0,0.4)"
+    },
+    "screens": {
+      "glavnaya": {
+        "title": "Главная",
+        "items": [],
+        "extra_components": []
+      },
+      "nastroyki": {
+        "title": "Настройки",
+        "items": [
+          "Редактировать",
+          "Фото",
+          "Выход"
+        ],
+        "extra_components": []
+      },
+      "o_programme": {
+        "title": "О программе",
+        "items": [],
+        "extra_components": []
+      }
+    }
+  },
+  "raw_response": "{\n  \"title\": \"Простое меню\",\n  \"items\": [\n    \"Главная\",\n    \"Настройки\",\n    \"О программе\"\n  ],\n  \"style\": {\n    \"bg_color\": \"#ffffff\",\n    \"text_color\": \"#000000\",\n    \"button_bg\": \"#333333\",\n    \"button_hover\": \"#444444\",\n    \"font_family\": \"Arial\",\n    \"border_radius\": \"8px\",\n    \"box_shadow\": \"0 2px 8px rgba(0,0,0,0.4)\",\n    \"layout\": \"vertical\"\n  },\n  \"screens\": {\n    \"главная\": {\n      \"title\": \"\",\n      \"items\": [],\n      \"extra_components\": []\n    },\n    \"настройки\": {\n      \"title\": \"\",\n      \"items\": [\n        \"Редактировать\",\n        \"Фото\",\n        \"Выход\"\n      ],\n      \"extra_components\": []\n    },\n    \"о-программе\": {\n      \"title\": \"\",\n      \"items\": [],\n      \"extra_components\": []\n    }\n  }\n}"
+}

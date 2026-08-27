@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "name": "Фитнес-приложение",
+    "description": "Яркий спортивный стиль, горизонтальное меню"
+  },
+  "title": "PulseFit",
+  "items": ["Тренировки", "Питание", "Прогресс", "Сообщество", "Настройки"],
+  "style": {
+    "bg_color": "#ff6b00",
+    "text_color": "#ffffff",
+    "button_bg": "#cc5500",
+    "button_hover": "#ff8c00",
+    "font_family": "'Impact', 'Arial Black', sans-serif",
+    "layout": "horizontal",
+    "border_radius": "0px",
+    "text_transform": "uppercase",
+    "box_shadow": "none",
+    "animation": "skewX(-3deg) scale(1.05)"
+  },
+  "screens": {
+    "workouts": {
+      "title": "Тренировки",
+      "items": ["Силовые", "Кардио", "Растяжка", "HIIT", "Йога"],
+      "extra_components": []
+    },
+    "settings": {
+      "title": "Настройки",
+      "items": [],
+      "extra_components": [
+        {"type": "slider", "label": "Громкость тренера", "min": 0, "max": 100, "value": 80},
+        {"type": "checkbox", "label": "Уведомления", "checked": true},
+        {"type": "checkbox", "label": "Звук таймера", "checked": true},
+        {"type": "select", "label": "Единицы измерения", "options": ["кг/км", "lbs/miles"]},
+        {"type": "input", "label": "Цель по калориям", "placeholder": "например 2000"}
+      ]
+    }
+  }
+}

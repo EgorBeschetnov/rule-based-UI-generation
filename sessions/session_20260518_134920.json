@@ -1,0 +1,105 @@
+{
+  "timestamp": "2026-05-18 13:49:20",
+  "model": "llama3.2:3b",
+  "title": "Дашборд управления проектами",
+  "success": true,
+  "html_file": "output\\menu_Дашборд_управления_проектами.html",
+  "user_input": "Дашборд управления проектами. Боковая панель с аватаром пользователя\nи пунктами: Обзор, Проекты, Сообщения, Аналитика, Настройки.\nНа главной странице: 3 карточки KPI (выручка, задачи, пользователи),\nлинейный график за месяц, прогресс-бары задач, список активности.\nВ аналитике: столбчатая диаграмма, круговой индикатор 75%,\nкарточки с трендами. В настройках: ползунок уведомлений,\nчекбокс тёмной темы, чекбокс email-рассылки, выбор валюты,\nполе имени пользователя. Тёмно-синий фон #1a1f3c,\nакценты фиолетовым #7c4dff и голубым, сетка карточек,\nскругление 12px, тени.",
+  "parsed_json": {
+    "title": "Дашборд управления проектами",
+    "items": [
+      "Обзор",
+      "Проекты",
+      "Сообщения",
+      "Аналитика",
+      "Настройки"
+    ],
+    "style": {
+      "bg_color": "#1a1f3c",
+      "text_color": "#ffffff",
+      "button_bg": "#7c4dff",
+      "button_hover": "#5c6bc0",
+      "font_family": "-apple-system",
+      "layout": "sidebar",
+      "border_radius": "12px",
+      "box_shadow": "0 2px 8px rgba(0,0,0,0.4)"
+    },
+    "screens": {
+      "dashboard": {
+        "title": "Главная страница",
+        "items": [
+          "КПИ-1: Выручка",
+          "КПИ-2: Задачи",
+          "КПИ-3: Пользователи",
+          "Список активности"
+        ],
+        "extra_components": [
+          {
+            "type": "text",
+            "content": "Линейный график за месяц"
+          },
+          {
+            "type": "text",
+            "content": "Прогресс-бары задач"
+          }
+        ]
+      },
+      "analytics": {
+        "title": "Аналитика",
+        "items": [],
+        "extra_components": [
+          {
+            "type": "text",
+            "content": "Столбчатая диаграмма"
+          },
+          {
+            "type": "text",
+            "content": "75"
+          },
+          {
+            "type": "text",
+            "content": "Карточки с трендами"
+          }
+        ]
+      },
+      "settings": {
+        "title": "Настройки",
+        "items": [],
+        "extra_components": [
+          {
+            "type": "slider",
+            "label": "Уведомления",
+            "min": 0,
+            "max": 100,
+            "value": 50
+          },
+          {
+            "type": "checkbox",
+            "label": "Темная тема",
+            "checked": false
+          },
+          {
+            "type": "checkbox",
+            "label": "Email-рассылка",
+            "checked": false
+          },
+          {
+            "type": "select",
+            "label": "Валюту",
+            "options": []
+          }
+        ]
+      },
+      "profile": {
+        "title": "Профиль",
+        "items": [
+          "Редактировать",
+          "Фото",
+          "Выход"
+        ],
+        "extra_components": []
+      }
+    }
+  },
+  "raw_response": "```\n{\n  \"title\": \"Дашборд управления проектами\",\n  \"items\": [\n    \"Обзор\",\n    \"Проекты\",\n    \"Сообщения\",\n    \"Аналитика\",\n    \"Настройки\"\n  ],\n  \"style\": {\n    \"bg_color\": \"#1a1f3c\",\n    \"text_color\": \"#ffffff\",\n    \"button_bg\": \"#7c4dff\",\n    \"button_hover\": \"#5c6bc0\",\n    \"font_family\": \"-apple-system\",\n    \"border_radius\": \"12px\",\n    \"box_shadow\": \"0 2px 8px rgba(0,0,0,0.4)\",\n    \"layout\": \"sidebar\"\n  },\n  \"screens\": {\n    \"dashboard\": {\n      \"title\": \"Главная страница\",\n      \"items\": [\n        {\"title\": \"КПИ-1: Выручка\"},\n        {\"title\": \"КПИ-2: Задачи\"},\n        {\"title\": \"КПИ-3: Пользователи\"}\n      ],\n      \"extra_components\": [\n        {\n          \"type\": \"line-chart\",\n          \"label\": \"Линейный график за месяц\"\n        },\n        {\n          \"type\": \"progress-bar\",\n          \"label\": \"Прогресс-бары задач\"\n        },\n        {\n          \"type\": \"list\",\n          \"label\": \"Список активности\"\n        }\n      ]\n    },\n    \"analytics\": {\n      \"title\": \"Аналитика\",\n      \"items\": [],\n      \"extra_components\": [\n        {\n          \"type\": \"bar-chart\",\n          \"label\": \"Столбчатая диаграмма\"\n        },\n        {\n          \"type\": \"gauge\",\n          \"label\": \"Круговой индикатор 75%\",\n          \"value\": 75\n        },\n        {\n          \"type\": \"card\",\n          \"label\": \"Карточки с трендами\"\n        }\n      ]\n    },\n    \"settings\": {\n      \"title\": \"Настройки\",\n      \"items\": [\n        {\"title\": \"Уведомления\"},\n        {\"title\": \"Темная тема\"},\n        {\"title\": \"Email-рассылка\"},\n        {\"title\": \"Валюту\"}\n      ],\n      \"extra_components\": [\n        {\n          \"type\": \"slider\",\n          \"label\": \"Уведомления\"\n        },\n        {\n          \"type\": \"checkbox\",\n          \"label\": \"Темная тема\"\n        },\n        {\n          \"type\": \"checkbox\",\n          \"label\": \"Email-рассылка\"\n        },\n        {\n          \"type\": \"select\",\n          \"label\": \"Валюту\"\n        }\n      ]\n    },\n    \"profile\": {\n      \"title\": \"Профиль\",\n      \"items\": [\n        {\"title\": \"Редактировать\"},\n        {\"title\": \"Фото\"},\n        {\"title\": \"Выход\"}\n      ],\n      \"extra_components\": []\n    }\n  }\n}\n```"
+}

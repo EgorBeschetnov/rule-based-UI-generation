@@ -1,0 +1,28 @@
+{
+  "timestamp": "20260420_170435",
+  "model": "llama3.2:3b",
+  "user_input": "Меню RPG игры \"Eclipse of Gods\" в мрачном стиле. Пункты: Новая игра, Продолжить, Настройки, Персонажи, Выход. В настройках: ползунок Звук, ползунок Музыка, чекбокс Полный экран, выбор Язык. В персонажах: Воин, Маг, Лучник.",
+  "raw_response": "{\n  \"title\": \"Новая игра\",\n  \"items\": [\"Продолжить\", \"Настройки\", \"Персонажи\", \"Выход\"],\n  \"style\": {\n    \"bg_color\": \"#2F4F4F\",\n    \"text_color\": \"#FFFFFF\",\n    \"button_bg\": \"#333333\",\n    \"button_hover\": \"#444444\",\n    \"font_family\": \"Arial, sans-serif\",\n    \"layout\": \"horizontal\",\n    \"border_radius\": \"8px\",\n    \"text_transform\": \"none\",\n    \"box_shadow\": \"0 0 10px rgba(0, 0, 0, 0.2)\",\n    \"animation\": \"transform translateX(5px)\"\n  },\n  \"screens\": {\n    \"new_game\": {\n      \"title\": \"Новая игра\",\n      \"items\": [\"Продолжить\", \"Настройки\", \"Персонажи\", \"Выход\"],\n      \"style\": {\n        \"bg_color\": \"#2F4F4F\",\n        \"text_color\": \"#FFFFFF\"\n      }\n    },\n    \"settings\": {\n      \"title\": \"Настройки\",\n      \"items\": [\"Звук\", \"Музыка\"],\n      \"extra_components\": [\n        {\"type\": \"slider\", \"label\": \"Звук\", \"min\": 0, \"max\": 100, \"value\": \u001b[K\n70},\n        {\"type\": \"checkbox\", \"label\": \"Полный экран\", \"checked\": false}\n      ],\n      \"style\": {\n        \"bg_color\": \"#2F4F4F\",\n        \"text_color\": \"#FFFFFF\"\n      }\n    },\n    \"characters\": {\n      \"title\": \"Персонажи\",\n      \"items\": [\"Воин\", \"Маг\", \"Лучник\"],\n      \"extra_components\": [],\n      \"style\": {\n        \"bg_color\": \"#2F4F4F\",\n        \"text_color\": \"#FFFFFF\"\n      }\n    }\n  }\n}",
+  "parsed_json": {
+    "title": "Меню",
+    "items": [
+      "Новая игра",
+      "Продолжить",
+      "Настройки",
+      "Персонажи",
+      "Выход"
+    ],
+    "style": {
+      "bg_color": "#1e1e2f",
+      "text_color": "#ffffff",
+      "button_bg": "#3a3a5a",
+      "button_hover": "#5a5a8a",
+      "font_family": "Arial, sans-serif",
+      "layout": "vertical",
+      "border_radius": "8px",
+      "text_transform": "uppercase"
+    },
+    "screens": {}
+  },
+  "success": false
+}

@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-07-05 07:13:35",
+  "model": "llava:7b",
+  "title": "Dashboard Análise",
+  "success": true,
+  "html_file": "output\\menu_Dashboard_Análise.html",
+  "user_input": "Создай дашборд аналитики в тёмном стиле с боковым меню.\nПункты навигации: Главная, События, Задачи, Аналитика, Хранилище, Настройки.\nНа главной: карточки со статистикой (пользователи, продажи, события),\nграфик активности, список последних событий, индикатор загрузки файлов.\nВ настройках: ползунок уведомлений, переключатель темы, выбор языка,\nполе Email. Тёмно-фиолетовый фон, акценты фиолетовым и розовым,\nшрифт без засечек, сетка карточек.",
+  "parsed_json": {
+    "title": "Dashboard Análise",
+    "items": [
+      "Пункт 1",
+      "Пункт 2",
+      "Пункт 3"
+    ],
+    "style": {
+      "layout": "sidebar"
+    },
+    "screens": {
+      "punkt_1": {
+        "title": "Пункт 1",
+        "items": [],
+        "extra_components": []
+      },
+      "punkt_2": {
+        "title": "Пункт 2",
+        "items": [],
+        "extra_components": []
+      },
+      "punkt_3": {
+        "title": "Пункт 3",
+        "items": [],
+        "extra_components": []
+      }
+    }
+  },
+  "raw_response": "Desculpe, я не могу crear конteúdo textual ou visual. No entanto, posso orientá-lo em como você poderia estruturar um JSON para representar um dashboard de análise em um estilo têmático e moderno semelhante ao mostrado na imagem. Aqui está uma descrição genérica que pode ser usada como base:\n\n```json\n{\n  \"dashboard\": {\n    \"title\": \"Dashboard Análise\",\n    \"subtitle\": \"Temos um dashboard de análise para você!\",\n    \"tabs\": [\n      {\n        \"label\": \"Geral\",\n        \"active\": true,\n        \"content\": [\n          {\n            \"sectionTitle\": \"Usuários ativos\",\n            \"dataDisplay\": {\n              \"count\": 2345,\n              \"percentage\": \"98%\",\n              \"imageUrl\": \"https://example.com/user-stats.jpg\"\n            }\n          },\n          {\n            \"sectionTitle\": \"Conversas ativas\",\n            \"dataDisplay\": [\n              {\n                \"label\": \"Mensagens de suporte\",\n                \"count\": 120,\n                \"unreadCount\": 3456\n              },\n              {\n                \"label\": \"Solicitações de atendimento\",\n                \"count\": 876,\n                \"unreadCount\": 15978\n              }\n            ]\n          },\n          {\n            \"sectionTitle\": \"E-mails recebidos\",\n            \"dataDisplay\": [\n              {\n                \"label\": \"Promoções\",\n                \"count\": 432,\n                \"unreadCount\": 1200\n              },\n              {\n                \"label\": \"Informações\",\n                \"count\": 2987,\n                \"unreadCount\": 6578\n              }\n            ]\n          }\n        ]\n      },\n      {\n        \"label\": \"Equipes\",\n        \"active\": false,\n        \"content\": [\n          {\n            \"sectionTitle\": \"Produtos em andamento\",\n            \"dataDisplay\": {\n              \"count\": 1056,\n              \"percentage\": \"42%\",\n              \"imageUrl\": \"https://example.com/team-stats.jpg\"\n            }\n          },\n          {\n            \"sectionTitle\": \"Estatísticas de negócios\",\n            \"dataDisplay\": [\n              {\n                \"label\": \"Clicks no botão\",\n                \"count\": 3409,\n                \"unreadCount\": 5678\n              },\n              {\n                \"label\": \"Conversas em andamento\",\n                \"count\": 120,\n                \"unreadCount\": 3456\n              }\n            ]\n          },\n          {\n            \"sectionTitle\": \"Faturamentos pendentes\",\n            \"dataDisplay\": [\n              {\n                \"label\": \"Receitas em andamento\",\n                \"count\": 2800,\n                \"unreadCount\": 45678\n              },\n              {\n                \"label\": \"Vendas pendentes\",\n                \"count\": 1534,\n                \"unreadCount\": 987654\n              }\n            ]\n          }\n        ]\n      }\n    ],\n    \"sidebar\": {\n      \"userProfile\": {\n        \"username\": \"JohnDoe\",\n        \"email\": \"johndoe@example.com\",\n        \"stats\": [\n          {\n            \"label\": \"Clicks no botão\",\n            \"count\": 12098,\n            \"unreadCount\": 345678\n          },\n          {\n            \"label\": \"Conversas em andamento\",\n            \"count\": 120,\n            \"unreadCount\": 3456\n          }\n        ]\n      },\n      \"userActivity\": [\n        {\n          \"icon\": \"https://example.com/activity-icon.png\",\n          \"label\": \"Usuário ativo\",\n          \"count\": 20,\n          \"lastAccess\": \"10 minutes ago\"\n        }\n      ]\n    },\n    \"footer\": {\n      \"info\": [\n        {\n          \"logoUrl\": \"https://example.com/company-logo.png\",\n          \"text\": \"© 2023 My Dashboard Team\"\n        }\n      ]\n    }\n  }\n}\n```\n\nEste JSON é apenas um exemplo genérico que você pode utilizar como referência para estruturar o seu dashboard. Por favor, altere as URLs, contadores e outras informações conforme necessário para sua aplicação específica."
+}
